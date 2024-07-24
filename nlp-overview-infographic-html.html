@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Language Processing (NLP) Overview</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #1e40af;
+        }
+        .description {
+            text-align: center;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .icon {
+            font-size: 48px;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin: 10px 0;
+            color: #1e40af;
+        }
+        p {
+            font-size: 14px;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Natural Language Processing (NLP)</h1>
+        <p class="description">A branch of AI that enables computers to understand, interpret, and generate human language.</p>
+        <div class="grid" id="infographic"></div>
+    </div>
+
+    <script>
+        const nlpData = [
+            {
+                icon: '🧠',
+                title: 'Core Focus',
+                description: 'Understanding, interpreting, and generating human language'
+            },
+            {
+                icon: '💬',
+                title: 'Key Applications',
+                description: 'Chatbots, language translation, sentiment analysis'
+            },
+            {
+                icon: '🌐',
+                title: 'Benefits',
+                description: 'Facilitates human-machine communication, enhances user experience'
+            },
+            {
+                icon: '📊',
+                title: 'Data Insights',
+                description: 'Extracts valuable insights from text data'
+            }
+        ];
+
+        const infographic = document.getElementById('infographic');
+
+        nlpData.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="icon">${item.icon}</div>
+                <h3>${item.title}</h3>
+                <p>${item.description}</p>
+            `;
+            infographic.appendChild(card);
+        });
+    </script>
+</body>
+</html>
